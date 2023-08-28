@@ -1,16 +1,16 @@
 local M = {}
 
-function M.check_pep8_errors()
+function M.check_gcc_errors()
 	-- Save the buffer
 	vim.cmd("w")
 
 	local filename = vim.fn.expand("%:t") -- Only the filename without the full path
 	if vim.fn.filereadable(filename) == 1 then
-		local output = vim.fn.system("pycodestyle " .. filename) -- Use pycodestyle command
+		local output = vim.fn.system("gcc -Wall -o /dev/null " .. filename .. " 2>&1")
 		local lines = vim.split(output, "\n")
 
 		local buffer_number = vim.fn.bufnr() -- Get the current buffer number
-		local namespace_id = vim.api.nvim_create_namespace("pep8_checker_errors")
+		local namespace_id = vim.api.nvim_create_namespace("gcc_checker_errors")
 
 		-- Clear existing signs and virtual text in the namespace
 		vim.fn.sign_unplace("LinterError", { buffer = buffer_number })
@@ -18,7 +18,7 @@ function M.check_pep8_errors()
 
 		vim.fn.sign_define("LinterError", { text = "", texthl = "ErrorMsg" })
 		for _, line in ipairs(lines) do
-			local _, _, line_number, message = string.find(line, "(%d+): (.+)")
+			local _, _, line_number, message = string.find(line, "(%d+):%d+: (.+)")
 			if line_number and message then
 				line_number = tonumber(line_number)
 				vim.fn.sign_place(0, "LinterError", "LinterError", filename, { lnum = line_number, priority = 10 })
