@@ -3,6 +3,10 @@
 
 📜 The GCC Checker is designed to help you spot GCC (GNU Compiler Collection) errors in your C code quickly. It provides real-time error checking, making it easier for you to maintain clean and error-free code. If you find it useful for your C projects, don't forget to give it a star ⭐!
 
+:seedling: Even though its working correctly, it's just a beta test for now we will keep iproving its functionalities, and making it updated. Don't forget to give this repo a star :star: if it helps in ur work. 😊
+
+## :loudspeaker: READ TILL THE END TO NOT MISS ANYTHING :loudspeaker:
+
 ## 🚀 Getting Started
 
 ### Installation
