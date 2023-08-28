@@ -7,7 +7,7 @@
 
 ### Installation
 
-⚠️ If you have already installed [PyCodeStyle Checker](https://github.com/RyuzakiiL23/PyCodeStyle_checker/tree/main), please follow these steps to install GCC Checker:
+⚠️ If you have already installed [pycode Checker](https://github.com/RyuzakiiL23/pycode_checker/tree/main) or [Betty Checker](https://github.com/RyuzakiiL23/Betty_checker/tree/main), please follow these steps to install GCC Checker:
 
 1. Navigate to your root directory:
 
@@ -40,7 +40,8 @@ nvim example.c
 ```
 
 Write your C code in the file, then enter normal mode using the <Esc> key and type <Space> <g> <c> to activate the GCC Checker.
-⚠️ The following steps are for users who have not installed PyCodeStyle Checker yet.
+
+⚠️ The following steps are for users who have not installed  [pycode Checker](https://github.com/RyuzakiiL23/pycode_checker/tree/main) or [Betty Checker](https://github.com/RyuzakiiL23/Betty_checker/tree/main), yet. ⚠️ 
 
 👉 For members using the sandbox (web_term), follow these steps:
 
@@ -77,7 +78,6 @@ nvim example.c
 
 Write your C code in the file, then enter normal mode using the <Esc> key and type <Space> <g> <c> to activate the GCC Checker.
 
-Local Installation
 👉 For local terminal usage (Debian-based distributions), follow these steps:
 
 1. Update your system:
@@ -105,12 +105,14 @@ nvim example.c
 ```
 
 Write your C code in the file, then enter normal mode using the <Esc> key and type <Space> <g> <c> to activate the GCC Checker.
+
 Features ✨
+
 ⚡️ The GCC Checker offers the following features:
 
 Identifies lines with GCC errors in your C code.
 Provides detailed error messages explaining the nature of the error.
-Using the GCC Checker
+
 🔥 To check your C code for GCC errors, follow these steps:
 
 1. Open a C file in nvim by using the command:
